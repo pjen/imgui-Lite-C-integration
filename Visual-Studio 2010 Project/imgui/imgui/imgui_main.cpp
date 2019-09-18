@@ -26,7 +26,7 @@ BOOL APIENTRY DllMain( HANDLE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 
 DLLFUNC void ext_strcpy(char *dest, const char* source)
 {
-	strcpy(dest, source);
+	strcpy_s(dest, sizeof(source), source);
 }
 
 DLLFUNC void imgui_init(long config_flags)
@@ -226,7 +226,7 @@ DLLFUNC var imgui_button_img_params(char *label, BMAP *input, var width, var hei
 {
 	ImTextureID my_tex_id = input->d3dtex;
 	ImGui::PushID(label);
-	bool res = ImGui::ImageButton(my_tex_id, ImVec2(_FLOAT(width), _FLOAT(height)), ImVec2(_FLOAT(u1), _FLOAT(v1)), ImVec2(_FLOAT(u2), _FLOAT(v2)), _FLOAT(padding), ImVec4(_FLOAT(background->red), _FLOAT(background->green), _FLOAT(background->blue), _FLOAT(background->alpha)), ImVec4(_FLOAT(tint->red), _FLOAT(tint->green), _FLOAT(tint->blue), _FLOAT(tint->alpha)));
+	bool res = ImGui::ImageButton(my_tex_id, ImVec2(_FLOAT(width), _FLOAT(height)), ImVec2(_FLOAT(u1), _FLOAT(v1)), ImVec2(_FLOAT(u2), _FLOAT(v2)), _INT(padding), ImVec4(_FLOAT(background->red), _FLOAT(background->green), _FLOAT(background->blue), _FLOAT(background->alpha)), ImVec4(_FLOAT(tint->red), _FLOAT(tint->green), _FLOAT(tint->blue), _FLOAT(tint->alpha)));
 	ImGui::PopID();
 	return res ? _VAR(1) : _VAR(0);
 }
@@ -620,7 +620,7 @@ DLLFUNC void imgui_drawlist_add_polygon(void *draw_list, POINT **points, int num
 	for(int i=0; i < num_points; i++)
 	{
 		POINT *point = points[i];
-		vec_array[i] = ImVec2(point->x, point->y);
+		vec_array[i] = ImVec2((float)point->x, (float)point->y);
 	}
 	ImColor vcol = ImColor(_FLOAT(col->red), _FLOAT(col->green), _FLOAT(col->blue), _FLOAT(col->alpha));
 	bool bclosed = closed > 0 ? true : false;
