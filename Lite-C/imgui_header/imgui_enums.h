@@ -286,3 +286,29 @@
 #define ImGuiDir_Up       2
     
 #define ImGuiDir_Down    3
+
+#define ImGuiKey_Tab 0
+#define ImGuiKey_LeftArrow 1
+#define ImGuiKey_RightArrow 2
+#define ImGuiKey_UpArrow 3
+#define ImGuiKey_DownArrow 4
+#define ImGuiKey_PageUp 5
+#define ImGuiKey_PageDown 6
+#define ImGuiKey_Home 7
+#define ImGuiKey_End 8
+#define ImGuiKey_Insert 9
+#define ImGuiKey_Delete 10
+#define ImGuiKey_Backspace 11
+#define ImGuiKey_Space 12
+#define ImGuiKey_Enter 13
+#define ImGuiKey_Escape 14
+#define ImGuiKey_A 15         // for text edit CTRL+A: select all
+#define ImGuiKey_C 16         // for text edit CTRL+C: copy
+#define ImGuiKey_V 17         // for text edit CTRL+V: paste
+#define ImGuiKey_X 18         // for text edit CTRL+X: cut
+#define ImGuiKey_Y 19         // for text edit CTRL+Y: redo
+#define ImGuiKey_Z 20         // for text edit CTRL+Z: undo
+#define ImGuiKey_COUNT 21
+
+#define IMGUI_PAYLOAD_TYPE_COLOR_4F "_COL4F"
+#define IMGUI_PAYLOAD_TYPE_COLOR_3F "_COL3F"

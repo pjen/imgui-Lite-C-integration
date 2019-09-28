@@ -90,19 +90,32 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="imgui.cpp" />
-    <ClCompile Include="imgui_inputs.cpp" />
-    <ClCompile Include="imgui_lists.cpp" />
-    <ClCompile Include="imgui_main.cpp" />
+    <ClCompile Include="imgui_demo.cpp" />
+    <ClCompile Include="imgui_dll_button.cpp" />
+    <ClCompile Include="imgui_dll_combi.cpp" />
+    <ClCompile Include="imgui_dll_draw.cpp" />
+    <ClCompile Include="imgui_dll_grouping.cpp" />
+    <ClCompile Include="imgui_dll_layout.cpp" />
+    <ClCompile Include="imgui_dll_popup.cpp" />
+    <ClCompile Include="imgui_dll_system.cpp" />
+    <ClCompile Include="imgui_dll_text.cpp" />
+    <ClCompile Include="imgui_dll_tooltip.cpp" />
+    <ClCompile Include="imgui_dll_window.cpp" />
+    <ClCompile Include="imgui_dll_image.cpp" />
+    <ClCompile Include="imgui_dll_inputs.cpp" />
+    <ClCompile Include="imgui_dll_lists.cpp" />
+    <ClCompile Include="imgui_dll_main.cpp" />
     <ClCompile Include="imgui_draw.cpp" />
     <ClCompile Include="imgui_impl_dx9.cpp" />
     <ClCompile Include="imgui_impl_win32.cpp" />
-    <ClCompile Include="imgui_menu.cpp" />
+    <ClCompile Include="imgui_dll_menu.cpp" />
     <ClCompile Include="imgui_nodes.cpp" />
-    <ClCompile Include="imgui_plots.cpp" />
-    <ClCompile Include="imgui_sliders.cpp" />
+    <ClCompile Include="imgui_dll_plots.cpp" />
+    <ClCompile Include="imgui_dll_sliders.cpp" />
     <ClCompile Include="imgui_widgets.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="dllmain.h" />
     <ClInclude Include="imconfig.h" />
     <ClInclude Include="imgui.h" />
     <ClInclude Include="imgui_impl_dx9.h" />
